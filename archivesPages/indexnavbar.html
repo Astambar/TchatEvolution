@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<nav class="navbar">
+		<a href="#" class="logo">Adventure</a>
+		<div class="nav-links">
+			<ul>
+				<li class="active"><a href="#">GLOBAL</a></li>
+				<li><a href="#">USERS</a></li>
+				<li><a href="#">USERS</a></li>
+				<li><a href="#">USERS</a></li>
+				<li><a href="#">USERS</a></li>
+				<li><a href="#">USERS</a></li>
+				<li><a href="#">USERS</a></li>
+				<li><a href="#">USERS</a></li>
+				<li><a href="#">USERS</a></li>
+				<li><a href="#">USERS</a></li>
+				<li><a href="#">USERS</a></li>
+				<li><a href="#">USERS</a></li>
+				<li><a href="#">USERS</a></li>
+				<li><a href="#">USERS</a></li>
+				<li><a href="#">USERS</a></li>
+				<li><a href="#">USERS</a></li>
+			</ul>
+		</div>
+		<img src="56763.png" alt="menu hamburger" class="menu-hamburger">
+		<a href="deconnexion.php">
+			<img src="power.png" alt="deconnexion" class="deconnexion">
+		</a>
+	</nav>
+	<header></header>
+	<script>
+		const menuHamburger = document.querySelector(".menu-hamburger")
+		const navLinks = document.querySelector(".nav-links")
+
+		menuHamburger.addEventListener('click',()=>{
+			navLinks.classList.toggle('mobile-menu')
+		})
+	</script>
+</body>
+</html>

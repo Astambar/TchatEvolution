@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+}
+body, html {
+    height:100vh;
+}
+body {
+    max-height: 100%;
+}
+form {
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    border: 3px blue inset;
+    border-radius:10px;
+    padding: 10px;
+}
+footer {
+    background-color: blueviolet;
+    height: 20vh;
+}
+footer  form{
+    display:flex;
+    flex-direction: row;
+    justify-content: left;
+    position: absolute;
+    bottom: 0;
+    width:100%;
+}
+footer form input[type=submit]{
+    background-repeat: no-repeat;
+    background-color: rgba(255, 255, 255, .0);
+    border: none;
+    color: white;
+    height: 64px;
+    width: 64px;
+    max-height: 100%;
+    margin: 4px 2px;
+    cursor: pointer;
+    background-image: url(send-svgrepo-com.svg);
+    background-size: contain;
+
+}
+
+footer form .container .msgbare {
+    display:flex;
+    justify-content: center;
+    width:100vw;
+    background-color: white;
+    height: 64px;
+    padding: 10px;
+}
+
+#messages {
+    background-color:beige;
+    overflow-y: scroll;
+    height: 80vh;
+}
+#messages .destinataire{
+    color:red;
+}
+#messages .receveur {
+    color:green;
+    border: thick double #32a1ce;
+}
