@@ -1,11 +1,21 @@
 <?php
 session_start();
-$bdd = new PDO('mysql:host=localhost;dbname=messages_prives;charset=utf8;','root','');
+// Se connecte à la base de données
+$rootPseudo = 'root';
+$rootPassword = '';
+$bdd = new PDO('mysql:host=localhost;dbname=messages_prives;charset=utf8;', $rootPseudo, $rootPassword);
+// Retourn une erreur en cas de probléme avec la base de données
 $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 if(!$_SESSION['pseudo'])
 {
 	header('location: default_page.php');
 }
+/**
+ * Verifie si le GET est correct puis envoi un message à l'utilisateur dont l'id correspond
+ * l'id de l'auteur est aussi envoyer en base de données on connais donc le  destinataire et l'auteur
+ * dans la base de données
+ * en cas  de probléme ont retourne le message aucun utilisateur trouvée
+ * */
 if(isset($_GET['id']) AND !empty(($_GET['id'])))
 {
 	$getid = $_GET['id'];
