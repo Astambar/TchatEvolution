@@ -18,7 +18,7 @@ if(isset($_GET['id']) AND !empty(($_GET['id'])))
 			$message = htmlspecialchars($_POST['message']);
 			$insererMessage=$bdd->prepare('INSERT INTO message(message, id_destinataire, id_auteur) VALUES (?, ?, ?)');
 			$insererMessage->execute(array($message, $getid, $_SESSION['id']));
-			header('Location: ');
+
 		}
 	}
 	else

@@ -38,7 +38,7 @@ while($message = $recupMessage->fetch())
 //var_dump($messageUserId);
 $countTab = count($messageUserId) -1 ;
 if(isset($messageUserId)){
-	for ($i=$countTab; 0 <= $i; $i--)
+	for ($i=0; $countTab >= $i; $i++)
 	{
 		if($messageUserId[$i]->idAuteur == $_SESSION['id'])
 		{

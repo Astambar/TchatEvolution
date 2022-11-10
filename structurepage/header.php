@@ -21,13 +21,19 @@ $url .= $_SERVER['REQUEST_URI'];
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>tchatEvolution <?=$_SESSION['pseudo']?></title>
+	<link rel="icon" type="image/x-icon" href="image/logo-fav.png">
+	<title>tchatEvolution
+		<?php
+		if(isset($_SESSION['pseudo']) AND !empty($_SESSION['pseudo']))
+			echo $_SESSION['pseudo'];
+		?>
+	</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="styles.css">
 	<?php
-	if($url == 'http://localhost/NewProject/connexion.php'
-		OR $url == 'http://localhost/NewProject/inscription.php')
+	if($url == 'http://localhost/TchatEvolution/connexion.php'
+		OR $url == 'http://localhost/TchatEvolution/inscription.php')
 		{
 						?>
 	<link rel="stylesheet" href="formStyle.css">
@@ -72,18 +78,18 @@ $url .= $_SERVER['REQUEST_URI'];
 
 	</nav>
 	<header>
-	<a href="http://localhost/NewProject/"><img class="logo" src="logo.png" alt="logo TchatEvolution" ></a>
+	<a href="http://localhost/TchatEvolution/"><img class="logo" src="image/logo.png" alt="logo TchatEvolution" ></a>
 	<?php
-			if($url == 'http://localhost/NewProject/index.php'
-				OR $url == 'http://localhost/NewProject/'
-				OR $url == 'http://localhost/NewProject/message.php?id='.$getid)
+			if($url == 'http://localhost/TchatEvolution/index.php'
+				OR $url == 'http://localhost/TchatEvolution/'
+				OR $url == 'http://localhost/TchatEvolution/message.php?id='.$getid)
 				{
 					?>
 					<article class="info">
 						<h4>
 							<?php
-							if($url == 'http://localhost/NewProject/index.php'
-								OR $url == 'http://localhost/NewProject/')
+							if($url == 'http://localhost/TchatEvolution/index.php'
+								OR $url == 'http://localhost/TchatEvolution/')
 								echo "Public - Général";
 							else
 							{
@@ -105,7 +111,7 @@ $url .= $_SERVER['REQUEST_URI'];
 					</article>
 					<article>
 					<button style="background:none; border:none;" onclick="showConfirm()">
-		<img class="deconnexion" src="power.png" alt="deconnexion">
+		<img class="deconnexion" src="image/power.png" alt="deconnexion">
 	</button>
 	<script type="text/javascript">
 		function showConfirm()
@@ -113,11 +119,11 @@ $url .= $_SERVER['REQUEST_URI'];
 			var answer=confirm("Vous allez être déconnecté en êtes vous sûr ?");
 			if (answer==true)
 			{
-				document.location.href="http://localhost/NewProject/deconnexion";
+				document.location.href="http://localhost/TchatEvolution/deconnexion";
 			}
 		}
 	</script>
-					<img src="menu_hamburger.png" alt="menu hamburger" class="menu-hamburger">
+					<img src="image/menu_hamburger.png" alt="menu hamburger" class="menu-hamburger">
 
 					</article>
 					<?php
@@ -127,7 +133,7 @@ $url .= $_SERVER['REQUEST_URI'];
 	</header>
 	<?php
 				// Afficher l'URL
-				if($url == 'http://localhost/NewProject/default_page.php')
+				if($url == 'http://localhost/TchatEvolution/default_page.php')
 					{
 						?>
 						<article class="default-page">

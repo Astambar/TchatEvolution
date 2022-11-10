@@ -1,6 +1,5 @@
 <?php
 session_start();
-include './structurepage/header.php';
 $bdd = new PDO('mysql:host=localhost;dbname=messages_prives;charset=utf8;','root','');
 $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 if(!$_SESSION['mdp'])
@@ -11,8 +10,6 @@ if(!$_SESSION['pseudo'])
 {
 	header('location: default_page.php');
 }
-$bdd = new PDO('mysql:host=localhost;dbname=messages_prives;charset=utf8;','root','');
-$bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 if(isset($_POST['valider']))
 {
@@ -22,14 +19,13 @@ if(isset($_POST['valider']))
 		$idSession = $_SESSION['id'];
 		$insereMessage =$bdd->prepare('INSERT INTO chat_general(id_auteur, message) VALUES(?, ?)');
 		$insereMessage->execute(array($idSession, $message));
-		header('Location: ');
 	}
 	else
 	{
 		echo "message vide";
 	}
 }
-
+include 'structurepage/header.php';
 ?>
 
 	<div class="container">
