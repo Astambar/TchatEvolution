@@ -11,7 +11,6 @@ $url .= "://";
 
 // Ajoutez l'hôte (nom de domaine, ip) à l'URL.
 $url .= $_SERVER['HTTP_HOST'];
-
 // Ajouter l'emplacement de la ressource demandée à l'URL
 $url .= $_SERVER['REQUEST_URI'];
 ?>
@@ -29,14 +28,14 @@ $url .= $_SERVER['REQUEST_URI'];
 		?>
 	</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<link rel="stylesheet" href="style.css">
-	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/styles.css">
 	<?php
 	if($url == 'http://localhost/TchatEvolution/connexion.php'
 		OR $url == 'http://localhost/TchatEvolution/inscription.php')
 		{
 						?>
-	<link rel="stylesheet" href="formStyle.css">
+	<link rel="stylesheet" href="css/formStyle.css">
 	<?php
 		}?>
 </head>
