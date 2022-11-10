@@ -1,6 +1,6 @@
 <?php
 session_start();
-include '/structurepage/header.php';
+include './structurepage/header.php';
 $bdd = new PDO('mysql:host=localhost;dbname=messages_prives;charset=utf8;','root','');
 $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 if(!$_SESSION['mdp'])
