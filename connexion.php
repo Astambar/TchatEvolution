@@ -1,7 +1,12 @@
 <?php
 session_start();
-$bdd = new PDO('mysql:host=localhost;dbname=messages_prives;charset=utf8;','root','');
+// Se connecte à la base de données
+$rootPseudo = 'root';
+$rootPassword = '';
+$bdd = new PDO('mysql:host=localhost;dbname=messages_prives;charset=utf8;', $rootPseudo, $rootPassword);
+// Retourn une erreur en cas de probléme avec la base de données
 $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+// Connecte l'utilisateur dans la base de données si tout les champ sont correcte
 if(isset($_POST['envoi'])){
 	if(!empty($_POST['pseudo']) AND !empty($_POST['mdp']))
 	{
@@ -19,7 +24,7 @@ if(isset($_POST['envoi'])){
 		}
 		else
 		{
-			echo "mot de passe ou mots de passe incorrect";
+			echo "mot de passe ou pseudo incorecte";
 		}
 	}
 	else
@@ -29,18 +34,18 @@ if(isset($_POST['envoi'])){
 }
 include 'structurepage/header.php';
 ?>
-<article class="default-page">
-<div id="container-form">
- <!-- zone de connexion -->
- <form action="" method="POST">
- <h1>Connexion</h1>
- <label><b>Pseudo</b></label>
- <input type="text" name="pseudo" placeholder="pseudo">
- <label><b>Mot de passe</b></label>
- <input type="password" name="mdp" placeholder="password">
- <input type="submit" id='submit' name="envoi" value='Connexion' >
- </form>
- </div>
- </article>
+	<article class="default-page">
+		<div id="container-form">
+			<!-- zone de connexion -->
+			<form action="" method="POST">
+				<h1>Connexion</h1>
+				<label><b>Pseudo</b></label>
+				<input type="text" name="pseudo" placeholder="pseudo">
+				<label><b>Mot de passe</b></label>
+				<input type="password" name="mdp" placeholder="password">
+				<input type="submit" id='submit' name="envoi" value='Connexion' >
+			</form>
+		</div>
+	</article>
 </body>
 </html>
