@@ -1,7 +1,13 @@
 <?php
+// Lance la session
 session_start();
-$bdd = new PDO('mysql:host=localhost;dbname=messages_prives;charset=utf8;','root','');
+// Se connecte à la base de données
+$rootPseudo = 'root';
+$rootPassword = '';
+$bdd = new PDO('mysql:host=localhost;dbname=messages_prives;charset=utf8;', $rootPseudo, $rootPassword);
+// Retourn une erreur en cas de probléme avec la base de données
 $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+// Verifie la sessions de l'utilisateur et retourne à la page par default en cas d'erreur
 if(!$_SESSION['mdp'])
 {
 	header('location: default_page.php');
@@ -10,7 +16,8 @@ if(!$_SESSION['pseudo'])
 {
 	header('location: default_page.php');
 }
-
+// Ajout en base de donnée des données du formulaire
+// en cas de message vide affiche un message et n'effectue pas la requêtes
 if(isset($_POST['valider']))
 {
 	if(!empty($_POST['message']))
