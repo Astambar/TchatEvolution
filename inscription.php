@@ -1,8 +1,12 @@
 <?php
 session_start();
-$bdd = new PDO('mysql:host=localhost;dbname=messages_prives;charset=utf8;','root','');
+// Se connecte à la base de données
+$rootPseudo = 'root';
+$rootPassword = '';
+$bdd = new PDO('mysql:host=localhost;dbname=messages_prives;charset=utf8;', $rootPseudo, $rootPassword);
+// Retourn une erreur en cas de probléme avec la base de données
 $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
+// Enregistre un nouvelle utilisateur dans la base de données si tout les champ sont correcte
 if(isset($_POST['envoi']))
 {
 	if(!empty($_POST['pseudo']) AND !empty($_POST['mdp'])
@@ -38,22 +42,22 @@ if(isset($_POST['envoi']))
 include 'structurepage/header.php';
 ?>
 <article class="default-page">
-<div id="container-form">
- <!-- zone de connexion -->
+	<div id="container-form">
+		<!-- zone d'inscription -->
 
- <form action="" method="POST">
- <h1>Inscription</h1>
+		<form action="" method="POST">
+		<h1>Inscription</h1>
 
- <label><b>Adresse email</b></label>
- <input type="email" name ="email" placeholder="example@domain.com">
- <label><b>Pseudo</b></label>
- <input type="text" name="pseudo" placeholder="pseudo">
- <label><b>Mot de passe</b></label>
- <input type="password" name="mdp" placeholder="password">
+		<label><b>Adresse email</b></label>
+		<input type="email" name ="email" placeholder="example@domain.com">
+		<label><b>Pseudo</b></label>
+		<input type="text" name="pseudo" placeholder="pseudo">
+		<label><b>Mot de passe</b></label>
+		<input type="password" name="mdp" placeholder="password">
 
- <input type="submit" id='submit' name="envoi" value='inscription' >
- </form>
- </div>
+		<input type="submit" id='submit' name="envoi" value='inscription' >
+		</form>
+	</div>
  </article>
 </body>
 </html>
