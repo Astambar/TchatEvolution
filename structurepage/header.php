@@ -1,6 +1,12 @@
 <?php
-$bdd = new PDO('mysql:host=localhost;dbname=messages_prives;charset=utf8;','root','');
+session_start();
+// Se connecte à la base de données
+$rootPseudo = 'root';
+$rootPassword = '';
+$bdd = new PDO('mysql:host=localhost;dbname=messages_prives;charset=utf8;', $rootPseudo, $rootPassword);
+// Retourn une erreur en cas de probléme avec la base de données
 $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+// reconstitue l'URL Actuelle et la stock dans $url
 if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on')
 	$url = "https";
 else
@@ -23,6 +29,7 @@ $url .= $_SERVER['REQUEST_URI'];
 	<link rel="icon" type="image/x-icon" href="image/logo-fav.png">
 	<title>tchatEvolution
 		<?php
+		// Rajoute le pseudo si l'utilisateur est connecté à sa session
 		if(isset($_SESSION['pseudo']) AND !empty($_SESSION['pseudo']))
 			echo $_SESSION['pseudo'];
 		?>
@@ -31,6 +38,7 @@ $url .= $_SERVER['REQUEST_URI'];
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/styles.css">
 	<?php
+	// Appel  le fichier css formStyle.css seulement si on ce situe dans une page de connexion ou d'inscription
 	if($url == 'http://localhost/TchatEvolution/connexion.php'
 		OR $url == 'http://localhost/TchatEvolution/inscription.php')
 		{
@@ -42,6 +50,7 @@ $url .= $_SERVER['REQUEST_URI'];
 <body>
 <nav class="navbar">
 			<?php
+			// Génére la liste des utilisateur seulement si nous sommes connecté
 			if(!empty($_SESSION))
 			{
 			?>
@@ -87,6 +96,7 @@ $url .= $_SERVER['REQUEST_URI'];
 					<article class="info">
 						<h4>
 							<?php
+							// Enoncé du header contectuel  si général alors Public - Général sinon Privé - Pseudo de la cible
 							if($url == 'http://localhost/TchatEvolution/index.php'
 								OR $url == 'http://localhost/TchatEvolution/')
 								echo "Public - Général";
@@ -118,7 +128,7 @@ $url .= $_SERVER['REQUEST_URI'];
 			var answer=confirm("Vous allez être déconnecté en êtes vous sûr ?");
 			if (answer==true)
 			{
-				document.location.href="http://localhost/TchatEvolution/deconnexion";
+				document.location.href="http://localhost/TchatEvolution/deconnexion.php";
 			}
 		}
 	</script>
