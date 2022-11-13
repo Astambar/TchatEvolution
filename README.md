@@ -23,4 +23,4 @@ Dans le dossier 'www' mettre le dossier contenant le projet, puis vérifier que 
 
 ## Licences
 
-- ![All Right Reserved](https://img.shields.io/github/license/Astambar/TchatEvolution)
+- [![All Right Reserved](https://github.com/Astambar/)]
