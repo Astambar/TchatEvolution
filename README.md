@@ -22,17 +22,13 @@ Dans le dossier 'www' mettre le dossier contenant le projet, puis vérifier que 
 ## Aux origine du projet
 
 - Ce projet naquit de la fascination pour les différentes applications et réseaux sociaux rencontrés au fils du temps.
-
-Entre les tchats élémentaires comme chaat.
-
-Les applications de rencontre comme Tinder, Jodel , RandoChat.
-
-La motivation d'avoir son propre Tchat était aussi un des moteurs de motivation, c'est pourquoi j'ai décidé de concevoir mon propre moteur de tchat qui je l'espère au fils des années évoluera avec de nombreux ajouts de fonctionnalité.
-
-Une amélioration du moteur du projet est à prévoir dans l'avenir, car j'estime que chaque développeur à une part de responsabilité sur la maltraitance qu'il fait subir aux machines et au passage à l'environnement.
-Si les machines pouvaient s'exprimer et ressentir quelque chose, je comprendrais qu'elles puissent se révolter au vu de certains utilisateurs.
-Nouvelle association du droit aux machines bientôt en vigueur si vous voulez mon avis  haha.
-Après cette note d'humour retour au projet initial :
+  Entre les tchats élémentaires comme chaat.
+  Les applications de rencontre comme Tinder, Jodel , RandoChat.
+  La motivation d'avoir son propre Tchat était aussi un des moteurs de motivation, c'est pourquoi j'ai décidé de concevoir mon propre moteur de tchat qui je l'espère au fils des années évoluera avec de nombreux ajouts de fonctionnalité.
+  Une amélioration du moteur du projet est à prévoir dans l'avenir, car j'estime que chaque développeur à une part de responsabilité sur la maltraitance qu'il fait subir aux machines et au passage à l'environnement.
+  Si les machines pouvaient s'exprimer et ressentir quelque chose, je comprendrais qu'elles puissent se révolter au vu de certains utilisateurs.
+  Nouvelle association du droit aux machines bientôt en vigueur si vous voulez mon avis  haha.
+  Après cette note d'humour retour au projet initial :
 
 ## Licences
 
