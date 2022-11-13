@@ -10,6 +10,11 @@
 
 ## Installation
 
+-Pour faire fonctionner le projet chez vous avec le moins de contrainte possible :
+Installer sur Windows WampServer puis aller dans phpMyAdmin et importer la bdd messages_prives.sql.
+S'assurer qu'une fois importer elle s'appelle bien messages_prives sinon changeait le nom de la bdd par celui-ci.
+Dans le dossier 'www' mettre le dossier contenant le projet, puis vérifier que le mot de passe phpMyAdmin est identique à celui renseigner dans les fichiers php où la bdd est appeler
+
 ## Usage
 
 ## Contribution
