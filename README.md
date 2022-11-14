@@ -29,6 +29,7 @@ Dans le dossier 'www' mettre le dossier contenant le projet, puis vérifier que 
   Si les machines pouvaient s'exprimer et ressentir quelque chose, je comprendrais qu'elles puissent se révolter au vu de certains utilisateurs.
   Nouvelle association du droit aux machines bientôt en vigueur si vous voulez mon avis  haha.
   Après cette note d'humour retour au projet initial :
+  J'ai  choisi d'utiliser PHP et MySQL fort d'une documentation  fournis et complétes et une forte diversité d'expertise du domaine.
 
 ## Licences
 
