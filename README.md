@@ -6,7 +6,7 @@
 
 - [Presentation Video](https://www.youtube.com/watch?v=8Cl8eVBhT0M&feature=youtu.be/)
 - [Linkedin Astambar](https://www.linkedin.com/in/et-si-on-changeait-le-monde-979115243/)
-- [Blog Project](?)
+- [Blog Project](https://www.linkedin.com/posts/et-si-on-changeait-le-monde-979115243_introduction-activity-6997766150361108480-fwaT?utm_source=share&utm_medium=member_desktop)
 
 ## Installation
 
